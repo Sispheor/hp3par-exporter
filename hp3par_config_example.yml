@@ -1,0 +1,8 @@
+
+- hp3par_api_url: "https://192.168.1.20:8080/api/v1"
+  hp3par_username: "hp3par_admin"
+  hp3par_password: "hp3par_password"
+
+#- hp3par_api_url: "https://192.168.1.30:8080/api/v1"
+#  hp3par_username: "user"
+#  hp3par_password: "password"
