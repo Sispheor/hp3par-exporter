@@ -2,9 +2,9 @@ import os
 
 import yaml
 
-from ForkingHTTPServer import ForkingHTTPServer
-from RequestHandler import RequestHandler
-from Utils import *
+from .ForkingHTTPServer import ForkingHTTPServer
+from .RequestHandler import RequestHandler
+from .Utils import *
 
 
 class HP3PARExporterServer(object):
@@ -46,4 +46,3 @@ class HP3PARExporterServer(object):
         except KeyboardInterrupt:
             print_err("Killing exporter")
             server.server_close()
-

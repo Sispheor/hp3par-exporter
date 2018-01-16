@@ -4,7 +4,7 @@ Entrypoint for the application
 
 import argparse
 
-from HP3PARExporterServer import HP3PARExporterServer
+from .HP3PARExporterServer import HP3PARExporterServer
 
 
 def main():
@@ -14,7 +14,8 @@ def main():
     parser.add_argument('--port', type=int, dest='port', default='8080', help='port to bind')
     parser.add_argument('--endpoint', type=str, dest='endpoint', default='/metrics',
                         help='endpoint where metrics will be published')
-    parser.add_argument('--config', type=str, dest='config', default='hp3par_config.yml')
+    parser.add_argument('--config', type=str, dest='config', default='hp3par_config.yml',
+                        help='path to the YAML configuration file')
 
     args = parser.parse_args()
 

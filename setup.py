@@ -36,6 +36,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
     ],
     install_requires=[
+        "cffi",
         "prometheus-client",
         "pyyaml",
         "python-3parclient"

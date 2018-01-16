@@ -1,4 +1,7 @@
 from http.server import BaseHTTPRequestHandler
+
+from . import prometheus_metrics
+
 try:
     from urllib.parse import urlparse
 except ImportError:
@@ -7,8 +10,6 @@ except ImportError:
 from hpe3parclient.client import HPE3ParClient
 from hpe3parclient.exceptions import HTTPUnauthorized
 from prometheus_client import generate_latest
-
-import prometheus_metrics
 
 
 class RequestHandler(BaseHTTPRequestHandler):
