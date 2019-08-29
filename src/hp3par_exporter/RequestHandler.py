@@ -44,7 +44,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                         print(ex)
 
                     system_info = hp3parclient.getStorageSystemInfo()
-
+                    hp3parclient.logout()
                     prometheus_metrics.gauge_hp3par_total_capacity_mib \
                         .labels(id=system_info["id"],
                                 hp3par_name=system_info["name"]) \
